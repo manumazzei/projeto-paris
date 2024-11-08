@@ -1,0 +1,374 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;  
+    overflow: hidden;
+}
+
+
+.video-background {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+}
+
+.video-background video {
+    width: 100%;  
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.video-background .fallback-image {
+    width: 100%;  
+    height: 100%; 
+    object-fit: cover;
+}
+
+
+.content {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 20px; 
+    left: 20px; 
+    color: white;
+    z-index: 1;
+    animation: fadeIn 2s ease-in; 
+    opacity: 0; 
+    animation-fill-mode: forwards; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-family: "Georgia", Serif;
+}
+
+.content p {
+    font-size: 1.5em;
+    font-family: "Georgia", Serif;
+}
+
+
+.botoesmenu {
+    margin-top: 1rem;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff; 
+    border: none;
+    border-radius: 20px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+.botoesmenu:hover {
+    color: #007bff;
+    background-color: #fff; 
+}
+
+.top-left-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px; 
+    height: auto;
+    margin: 10px; 
+    z-index: 10;
+}
+
+.conteudos-gerais {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; 
+    max-width: 600px; 
+    text-align: center;
+    animation: fadeIn 2s ease-in; 
+    opacity: 0; 
+    animation-fill-mode: forwards; 
+}
+
+.nova-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    position: absolute;
+    top: 32rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; 
+    max-width: 800px; 
+    text-align: center;
+    animation: fadeIn 2s ease-in; 
+    opacity: 0;
+    animation-fill-mode: forwards; 
+}
+
+.image-grid {
+    width: 80%;
+    text-align: center;
+}
+h2 {
+    margin-bottom: 20px;
+}
+.grid-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.grid-container img {
+    width: 150px;
+    height: 222px;
+    border-radius: 15px;
+    transition: transform 0.5s;
+    object-fit: cover; 
+}
+.grid-container img:hover {
+    transform: scale(1.05);
+}
+.description {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+    opacity: 0;
+    transition: opacity 0.3s;
+    height: 0;
+    overflow: hidden;
+    font-weight: bold;
+}
+.grid-item:hover .description {
+    opacity: 1;
+    height: auto;
+}
+
+/* CSS DO GRID DE PONTOS  */
+.div-de-pontos {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    position: absolute;
+    top: 25rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%; 
+    max-width: 900px; 
+    text-align: center;
+    animation: fadeIn 2s ease-in; 
+    opacity: 0; 
+    animation-fill-mode: forwards; 
+}
+
+.grid-container-pontos {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.grid-container-pontos img {
+    width: 250px;
+    height: 222px;
+    border-radius: 15px;
+    transition: transform 0.5s;
+    object-fit: cover; 
+}
+
+/* CSS DO MEU MODAL DO PONTOS */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+.modal-content {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 80%;
+}
+.close {
+    cursor: pointer;
+    color: #007bff;
+    font-size: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* CSS DO GRID DE COMIDAS */
+.grid-comidas {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    gap: 10px;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    position: absolute;
+    top: 25rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%; 
+    max-width: 600px; 
+    text-align: center;
+    animation: fadeIn 2s ease-in; 
+    opacity: 0; 
+    animation-fill-mode: forwards; 
+}
+
+
+.grid-comidas-item {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+
+.grid-comidas-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+
+.grid-comidas-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.6);
+}
+
+.grid-comidas-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+
+.grid-comidas-item:hover .overlay {
+    opacity: 1;
+}
+
+
+/* CSS FORMULARIO  */
+form{
+    display: grid;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    position: absolute;
+    top: 25rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%; 
+    max-width: 700px; 
+    text-align: center;
+    animation: fadeIn 2s ease-in; 
+    opacity: 0; 
+    animation-fill-mode: forwards; 
+    height: 400px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+  fieldset {
+    border: none;
+  }
+  
+  legend {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #4a90e2;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  
+  label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+  }
+  
+  button {
+    padding: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  button:hover {
+    background-color: #357ab7;
+  }

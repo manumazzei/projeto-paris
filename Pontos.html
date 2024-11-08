@@ -1,0 +1,107 @@
+<script>
+    function openModal(imageIndex) {
+        const modal = document.getElementById("modal");
+        const modalText = document.getElementById("modal-text");
+
+        
+        switch (imageIndex) {
+            case 1:
+                modalText.innerText = "A Torre Eiffel em Paris, Um dos ícones mais reconhecidos do mundo, oferece vistas deslumbrantes da cidade e é especialmente bonita à noite.";
+                break;
+            case 2:
+                modalText.innerText = "O maior museu de arte do mundo, Museu do Louvre, famoso por obras-primas como a Mona Lisa e a Vênus de Milo. Sua arquitetura e o histórico palácio também são impressionantes.";
+                break;
+            case 3:
+                modalText.innerText = "A catedral de Notre Dame, um exemplo magnífico da arquitetura gótica, famosa por seus vitrais e gargulas. Embora tenha sofrido danos em um incêndio em 2019, ainda é um marco importante da cidade.";
+                break;
+            default:
+                modalText.innerText = "Descrição não disponível.";
+        }
+
+        modal.style.display = "flex";
+    }
+
+    function closeModal() {
+        const modal = document.getElementById("modal");
+        modal.style.display = "none";
+    }
+
+
+    window.onclick = function(event) {
+        const modal = document.getElementById("modal");
+        if (event.target === modal) {
+            closeModal();
+        }
+    }
+</script>
+
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Exemplo de vídeo como fundo.">
+    <title>Capa do projeto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="/images/istockphoto-1308525330-640_adpp_is.mp4" type="video/mp4">
+            <!-- <source src="video-inexistente.mp4" type="video/mp4"> -->
+
+            <img src="/images/paris-desktop-wallpaper-mpovfcb32q2909ac.jpg" alt="Imagem de fundo" class="fallback-image">
+        </video>
+    </div>
+    
+    <a href="Inicio.html">
+        <img src="/images/rato-desenho.png" class="top-left-image">
+    </a>
+
+    <div class="content">
+        <h1>Pontos turísticos</h1>
+        <p>Aqui você encontra um pouco mais sobre as belezas de Paris!</p>
+
+        <button class="botoesmenu" onclick="window.location.href='Paris.html'">
+            Sobre Paris
+          </button>
+          <button class="botoesmenu" onclick="window.location.href='Pontos.html'">
+            Principais atrações
+          </button>
+          <button class="botoesmenu" onclick="window.location.href='Comidas.html'">
+            Comidas tipicas
+          </button>
+          <button class="botoesmenu" onclick="window.location.href='Formulario.html'">
+            Venha para Paris!
+          </button>
+    </div>
+
+    <div class="div-de-pontos">
+        <div class="image-grid">
+            <h2>Clique na imagem para saber mais</h2>
+            <div class="grid-container-pontos">
+                <div class="grid-item">
+                    <img src="/images/torre-eiffel.webp" alt="Imagem 1" onclick="openModal(1)">
+                </div>
+                <div class="grid-item">
+                    <img src="/images/images (51).jfif" alt="Imagem 2" onclick="openModal(2)">
+                </div>
+                <div class="grid-item">
+                    <img src="/images/images.jfif" alt="Imagem 3" onclick="openModal(3)">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="modal-text"></p>
+        </div>
+    </div>
+
+</body>
+</html>

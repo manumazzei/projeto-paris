@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Exemplo de vídeo como fundo.">
+    <title>Capa do projeto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="/images/istockphoto-1308525330-640_adpp_is.mp4" type="video/mp4">
+            <!-- <source src="video-inexistente.mp4" type="video/mp4"> -->
+
+            <img src="/images/paris-desktop-wallpaper-mpovfcb32q2909ac.jpg" alt="Imagem de fundo" class="fallback-image">
+        </video>
+    </div>
+    
+    <a href="Inicio.html">
+        <img src="/images/rato-desenho.png" class="top-left-image">
+    </a>
+
+    <div class="content">
+        <h1>Viagem à Paris</h1>
+        <p>Concorra a uma viagem incrível se inscrevendo no formulário abaixo</p>
+
+        <button class="botoesmenu" onclick="window.location.href='Paris.html'">
+            Sobre Paris
+          </button>
+          <button class="botoesmenu" onclick="window.location.href='Pontos.html'">
+            Principais atrações
+          </button>
+          <button class="botoesmenu" onclick="window.location.href='Comidas.html'">
+            Comidas tipicas
+          </button>
+          <button class="botoesmenu" onclick="window.location.href='Formulario.html'">
+            Venha para Paris!
+          </button>
+    </div>
+
+    <form>
+        <fieldset>
+          <legend>Inscreva-se aqui!</legend>
+          <div>
+            <label for="name">Nome:</label>
+            <input type="text"name="user_name" />
+            <label for="number">Numero da sorte:</label>
+            <input type="number" name="user_number" />
+            <label for="email">Email:</label>
+            <input type="text" name="user_email" />
+          </div>
+          <button>Clique e concorra!</button>
+        </fieldset>
+      </form>
+
+</body>
+</html>
